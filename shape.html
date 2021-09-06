@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Working with css rotate() property">
+    <title>Shape</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            margin: 5% auto;
+            border-radius: 5px;
+            position: relative;
+            contain: content;
+            border: 1px solid rgba(160, 148, 148, 0.25);
+        }
+
+        .card:hover {
+            background-color: rgba(0, 0, 0, .25);
+            cursor: pointer;
+        }
+
+        .card-top {
+            position: absolute;
+            height: 300px;
+            width: 400px;
+            left: -30px;
+            top: -90px;
+            right: 20px;
+            z-index: 2;
+            border-bottom: 2px solid #fff;
+            background-color: #eee;
+            transform: rotate(15deg);
+            contain: content;
+            box-sizing: border-box;
+        }
+
+        .card-bottom {
+            position: relative;
+            height: 300px;
+            width: 360px;
+            left: -46px;
+            bottom: -180px;
+            z-index: 1;
+            right: 20px;
+            background-color: #000;
+            transform: rotate(15deg);
+            contain: content;
+            color: #eee;
+        }
+
+        .card__img {
+            width: 80%;
+            height: auto;
+            margin: 80px 10px 0 35px;
+            transform: rotate(347deg);
+        }
+
+        .card-bottom-text {
+            width: 70%;
+            margin: 50px 15% 0 13%;
+            height: fit-content;
+            padding: 5px 10px;
+            transform: rotate(-15deg);
+            box-sizing: border-box;
+        }
+
+        #title {
+            text-align: left;
+        }
+
+        .card__desc {
+            text-align: justify;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: red;
+            border-radius: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            top: -12px;
+            left: 25px;
+            z-index: 5;
+        }
+
+        @media screen and (max-width:667px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-top">
+                <img class="card__img" src="./spk001.png" alt="Product Image">
+            </div>
+            <div class="card-bottom">
+                <div class="card-bottom-text">
+                    <span class="dot"></span>
+                    <h2 id="title">Audio Speaker</h2>
+                    <p class="card__desc">This is a high quality speaker for your home. Your family hair health is our
+                        concern...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-top">
+                <img class="card__img" src="spk001.png" alt="Product Image">
+            </div>
+            <div class="card-bottom">
+                <div class="card-bottom-text">
+                    <span class="dot"></span>
+                    <h2 id="title">Audio Speaker</h2>
+                    <p class="card__desc">This is a high quality speaker for your home. Your family hair health is our
+                        concern...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-top">
+                <img class="card__img" src="spk001.png" alt="Product Image">
+            </div>
+            <div class="card-bottom">
+                <div class="card-bottom-text">
+                    <span class="dot"></span>
+                    <h2 id="title">Audio Speaker</h2>
+                    <p class="card__desc">This is a high quality speaker for your home. Your family hair health is our
+                        concern...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-top">
+                <img class="card__img" src="spk001.png" alt="Product Image">
+            </div>
+            <div class="card-bottom">
+                <div class="card-bottom-text">
+                    <span class="dot"></span>
+                    <h2 id="title">Audio Speaker</h2>
+                    <p class="card__desc">This is a high quality speaker for your home. Your family hair health is our
+                        concern...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
